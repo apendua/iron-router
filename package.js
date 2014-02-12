@@ -8,8 +8,8 @@ Package.on_use(function (api) {
   api.use('underscore', ['client', 'server']);
   api.use('ejson', ['client', 'server']);
 
-  api.use('templating', 'client');
-  api.use('handlebars', 'client');
+  //api.use('templating', 'client');
+  api.use('ui', 'client'); // for Handlebars and UI
   api.use('jquery', 'client');
 
   api.add_files('lib/utils.js', ['client', 'server']);
@@ -18,9 +18,8 @@ Package.on_use(function (api) {
   api.add_files('lib/router.js', ['client', 'server']);
 
   api.add_files('lib/client/location.js', 'client');
-  api.add_files('lib/client/page_manager_shark.js', 'client');
   api.add_files('lib/client/router.js', 'client');
-  api.add_files('lib/client/default_layout.html', 'client');
+  //api.add_files('lib/client/default_layout.html', 'client');
   api.add_files('lib/client/route_controller.js', 'client');
   api.add_files('lib/client/helpers.js', 'client');
 
@@ -55,7 +54,7 @@ Package.on_test(function (api) {
   api.use('test-helpers', ['client', 'server']);
   api.use('reactive-dict', ['client', 'server']);
 
-  api.use('templating', 'client');
+  //api.use('templating', 'client');
 
   api.add_files('test/test_helpers.js', ['client', 'server']);
   api.add_files('test/route.js', ['client', 'server']);
